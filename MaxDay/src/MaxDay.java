@@ -18,14 +18,22 @@ public class MaxDay {
  
 
 	public static void main(String[] args) {
-		MaxDay day=new MaxDay();
-		System.out.println("월 입력");
+		MaxDay day=new MaxDay();	
 		Scanner scanner=new Scanner(System.in);
+		System.out.printf("반복 횟수:");
+		int repeat=scanner.nextInt();
+		
+		for(int i=0; i<repeat;i++) {
+			System.out.println("월 입력");
 		int month=scanner.nextInt();
 		
 		
 		System.out.printf("%d요일의 최대 날은 %d이다.\n",month,day.GetMonthOfMaxDays(month));
 		day.samplecalendar();
+			
+		}
+		System.out.println("~~~~~~~~~~~~~~~~~~~~~~");
+		
 		scanner.close();
 		
 	}
