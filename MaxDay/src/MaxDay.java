@@ -1,26 +1,19 @@
 import java.util.Scanner;
 
 public class MaxDay {
+	
+	private static  final int[] MAX_DAYS= {31,28,31,30,31,30,31,31,30,31,30,31};
+	public  int GetMonthOfMaxDays(int month){return MAX_DAYS[month-1];}
+	
 
 	public static void main(String[] args) {
-		int munth,day;
-		String m;
-		
+		MaxDay day=new MaxDay();
 		System.out.println("월 입력");
 		Scanner scanner=new Scanner(System.in);
-		m=scanner.next();
-		munth=Integer.parseInt(m);
-		if(munth<8 )
-		{
-			if(munth%2==1) day=31;
-			else if(munth==2) day=28;
-			else day=30;
-		}
-		else {
-			if(munth%2==1) day=30;
-			else day=31;			
-		}
-		System.out.printf("%d요일의 최대 날은 %d이다.",munth,day );
+		int month=scanner.nextInt();
+		
+		
+		System.out.printf("%d요일의 최대 날은 %d이다.",month,day.GetMonthOfMaxDays(month));
 		
 		scanner.close();
 		
