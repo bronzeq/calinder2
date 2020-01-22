@@ -18,16 +18,21 @@ public class MaxDay {
  
 
 	public static void main(String[] args) {
+		String PROMPT ="cal>";
 		MaxDay day=new MaxDay();	
 		Scanner scanner=new Scanner(System.in);
-		System.out.printf("반복 횟수:");
-		int repeat=scanner.nextInt();
+		System.out.println("반복 횟수:");
+		System.out.print(PROMPT);
 		
-		for(int i=0; i<repeat;i++) {
+		
+		int month = 1;
+		
+	while( true) {
 			System.out.println("월 입력");
-		int month=scanner.nextInt();
-		
-		
+			System.out.print(PROMPT);
+		 month=scanner.nextInt();	
+		if (month==-1) {break;}
+		if(month>12) {continue;}
 		System.out.printf("%d요일의 최대 날은 %d이다.\n",month,day.GetMonthOfMaxDays(month));
 		day.samplecalendar();
 			
