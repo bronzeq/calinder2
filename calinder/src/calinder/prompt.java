@@ -31,7 +31,7 @@ public class prompt {
 		calinder cal=new calinder();
 		int month=1;
 		int year=2000;
-		int WeekDay=0;
+		
 		while(true) {
 			System.out.println("년 입력(exit==-1)");
 			System.out.print("year>");
@@ -41,15 +41,15 @@ public class prompt {
 			System.out.println("달 입력");
 			System.out.print("month>");
 			month=scanner.nextInt();
-			
+			/*
 			System.out.println("첫째 날의 요일을 입력하시오(SU  MO  TU  WE   TH  FR  SA)");
 			System.out.print("WeekDay>");
 			String str_WeekDay=scanner.next();			
 			WeekDay= ParseDay(str_WeekDay);
-		
+		*/
 			if(month==-1)  break;
 			if(month>12)continue;			
-			cal.PrintCalinder(year, month,WeekDay);
+			cal.PrintCalinder(year, month);
 			}
 		System.out.println("bye");
 		
