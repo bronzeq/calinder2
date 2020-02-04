@@ -1,7 +1,5 @@
 package calinder;
 
-//import java.util.Scanner;
-
 public class calinder {
 	
 	private static  final int[] MAX_DAYS= {0,31,28,31,30,31,30,31,31,30,31,30,31};
@@ -14,10 +12,9 @@ public class calinder {
 
 	public int  GetMaxDay(int year, int month) {
 		if(isLeepYear(year)){return LEEP_MAX_DAYS[month];}
-		else
-			return MAX_DAYS[month];
-		
+		else 	return MAX_DAYS[month];		
 	}
+	
 	
 	public void PrintCalinder(int year, int month)
 	{
@@ -72,6 +69,14 @@ public class calinder {
 		int weekday=(count+standard_WeekDay)%7;
 		return weekday;
 	}
-	
-
+	/*
+	public static void main(String[]args) throws ParseException  {
+		calinder cal=new calinder();
+		System.out.println(cal.GetWeekDay(1970, 1, 1)==4);
+		System.out.println(cal.GetWeekDay(1971, 1, 1)==5);
+		System.out.println(cal.GetWeekDay(1972, 1, 1)==6);
+		System.out.println(cal.GetWeekDay(1973, 1, 1)==1);
+		System.out.println(cal.GetWeekDay(1974, 1, 2)==3);		
+	}
+*/
 }
